@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">matricularAluno</string>
+    <string name="documento">Documento: </string>
+    <string name="valorDocumento">SC098765</string>
+    <string name="nome">Nome: </string>
+    <string name="barbara">Barbara</string>
+    <string name="inputNomeAluno">Informe nome do aluno</string>
+    <string name="inputDocumentoAluno">Informe documento do aluno</string>
+    <string name="buttonMatricularAluno">Matricular Aluno</string>
+    <string name="buttonDesmatricularAluno">Desmatricular</string>
+    <string name="numeroAlunosMatriculados">Alunos matriculados: %d</string>
+    <string name="pesquisarAlunoMatriculado">Pesquisar aluno</string>
+    <string name="imagem_description">Sala de aula onde estäo presentes professor e alunos</string>
+</resources>
