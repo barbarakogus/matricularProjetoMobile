@@ -8,46 +8,49 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imagemTopo"
             android:layout_width="0dp"
             android:layout_height="200dp"
-            app:layout_constraintStart_toStartOf="@id/inputAlunoNome"
-            app:layout_constraintEnd_toEndOf="@id/inputAlunoNome"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/imagem_description"
             android:scaleType="center"
-            android:contentDescription="@string/imagem_description">
+            app:layout_constraintEnd_toEndOf="@id/inputAlunoNome"
+            app:layout_constraintStart_toStartOf="@id/inputAlunoNome"
+            app:layout_constraintTop_toTopOf="parent">
         </ImageView>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputAlunoNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/inputNomeAluno"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imagemTopo"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp">
+            android:hint="@string/inputNomeAluno"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagemTopo">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:digits="@string/caracteres_atributo_digits"/>
+                android:digits="@string/caracteres_atributo_digits"
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputAlunoDocumento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/inputDocumentoAluno"
-            app:layout_constraintStart_toStartOf="@id/inputAlunoNome"
-            app:layout_constraintTop_toBottomOf="@id/inputAlunoNome"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp">
+            android:hint="@string/inputDocumentoAluno"
+            app:layout_constraintStart_toStartOf="@id/inputAlunoNome"
+            app:layout_constraintTop_toBottomOf="@id/inputAlunoNome">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,49 +62,52 @@
             android:id="@+id/button_matricularAluno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/inputAlunoDocumento"
-            android:text="@string/buttonMatricularAluno"
             android:layout_marginTop="20dp"
-            >
+            android:text="@string/buttonMatricularAluno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputAlunoDocumento">
         </Button>
 
         <TextView
             android:id="@+id/numeroAlunosMatriculados"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@id/pesquisarAluno"
-            app:layout_constraintStart_toStartOf="@id/inputAlunoNome"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/pesquisarAluno"
-            tools:text="Alunos matriculaodos: "
-            android:textStyle="bold">
+            app:layout_constraintEnd_toStartOf="@+id/pesquisarAluno"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/inputAlunoNome"
+            app:layout_constraintTop_toTopOf="@id/pesquisarAluno"
+            tools:text="@string/quantidade_alunos_matriculados">
         </TextView>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/pesquisarAluno"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/pesquisarAlunoMatriculado"
-            app:layout_constraintStart_toEndOf="@id/numeroAlunosMatriculados"
-            app:layout_constraintTop_toBottomOf="@id/button_matricularAluno"
-            app:layout_constraintEnd_toEndOf="@id/inputAlunoNome"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="20dp"
-            android:visibility="invisible">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/pesquisarAlunoMatriculado"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/inputAlunoNome"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/numeroAlunosMatriculados"
+            app:layout_constraintTop_toBottomOf="@id/button_matricularAluno">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_listaAlunos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/pesquisarAluno"
-            app:layout_constraintStart_toStartOf="@id/inputAlunoNome"
-            app:layout_constraintEnd_toEndOf="@id/inputAlunoNome"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/inputAlunoNome"
+            app:layout_constraintStart_toStartOf="@id/inputAlunoNome"
+            app:layout_constraintTop_toBottomOf="@id/pesquisarAluno"
             tools:listitem="@layout/layout_linha_aluno">
         </androidx.recyclerview.widget.RecyclerView>
 

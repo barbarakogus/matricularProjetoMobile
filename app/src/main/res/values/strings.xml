@@ -11,5 +11,7 @@
     <string name="numeroAlunosMatriculados">Alunos matriculados: %d</string>
     <string name="pesquisarAlunoMatriculado">Pesquisar aluno</string>
     <string name="imagem_description">Sala de aula onde estäo presentes professor e alunos</string>
-    <string name="caracteres_atributo_digits">abcdefghijklmnopqrstuvx\u0020</string>
+    <string name="caracteres_atributo_digits">\abcdefghijklmnopqrstuvwxyz\u0020\</string>
+    <string name="quantidade_alunos_matriculados">Alunos matriculaodos:</string>
 </resources>
+

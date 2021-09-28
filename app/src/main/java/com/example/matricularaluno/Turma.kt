@@ -1,7 +1,5 @@
 package com.example.matricularaluno
 
-import android.widget.Toast
-
 class Turma(val materia: String, val horario: String, val numeroMaximoAlunos: Int) {
 
     private val listaAlunosMatriculados = mutableListOf<Pair<String, String>>()
